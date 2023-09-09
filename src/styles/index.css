@@ -1,12 +1,163 @@
 
-/* 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+.container-fluid {
+    padding-bottom: 40vh;
+    padding-top: 20vh;
+    background: #e0dfdf;
+}
+
+.lista {
+    padding: 45px 40px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: #ffffff;
+    width: 500px;
+}
+
+ul li {
+    background: #b3a7a7;
+    padding: 20px 20px;
+    list-style: none;
+}
+
+ul {
+    padding: 0px;
+}
+
+.nueva {
+    margin-bottom: 0px;
+}
+
+.h1, h1 {
+    /*padding: 50px;*/
+    font-size: 50px;
+    color: #292432;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+::placeholder { 
+    color: #a5a5b3; }
+
+input {
+    border: none !important;
+    width: 100%;
+    background: #e0dfdf;
+    padding: 20px 20px;
+    list-style: none;
+    }
+
+    
+
+input:focus-visible {
+    outline: none;
+    }
+
+
+button,
+input:focus-visible {
+    border: none !important;
+
+}
+
+input:active {
+    border: none !important;
+
+}
+
+.col-2 {
+    background: #a7b1b3;
+}
+
+.col-10 {
+    background: #e0dfdf;
+}
+
+.items {
+    justify-content: end;
+    text-align: left;
+    padding-right: 20px;
+    background: #e0dfdf;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+i.fa-solid.fa-minus {
+    float: left;
+    margin-left: -3px;
+    margin-top: 5px;
+}
+
+i.fa-solid.fa-plus {
+    margin-left: 39%;
+    margin-top: 24px;
+}
+
+.row.texto{
+    margin-bottom: 10px;
+}
+
+li.row.entrada {
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 407px) and (max-width: 500px)  {
+    .lista { 
+        width: 100%;
+    }
+
+    i.fa-solid.fa-plus {
+        margin-left: 35%;
+        margin-top: 24px;
+    }
+  
+
+}
+
+
+@media (min-width: 377px) and (max-width: 407px)  {
+    .col-11 {
+        width: 90.666667%;
+    }
+
+    i.fa-solid.fa-plus {
+        margin-left: 28%;
+        margin-top: 24px;
+    }
+
+    .lista { 
+        width: 100%;
+    }
+}
+
+@media (min-width: 353px) and (max-width: 377px)  {
+    .col-11 {
+        width: 89.666667%;
+
+    }
+    .lista { 
+        width: 100%;
+    }
+
+    i.fa-solid.fa-plus {
+        margin-left: 18%;
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 353px)  {
+    .col-11 {
+        width: 88.666667%;
+
+    }
+    .lista { 
+        width: 100%;
+    }
+    i.fa-solid.fa-plus {
+        margin-left: 12%;
+        margin-top: 24px;
+    }
+}
