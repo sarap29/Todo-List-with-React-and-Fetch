@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 
-const TodoList = () => {
+const Tareas = () => {
 const [inputValue, setInputValue] = useState("");
-const [todos, setTodos] = useState(null);
+const [todos, setTodos] = useState([]);
 
 
 //Añadir tareas en el input pulsando enter
@@ -13,9 +13,6 @@ const añadirTareaEnter = (e) => {
     setInputValue('')
   } 
 };
-
-
-//Añadir tareas del inpunt pulsando el ICONO +
 
 const añadirTareaBoton = () => {
   if (inputValue.trim() !== ""){
@@ -55,7 +52,7 @@ useEffect(() => {
 
 
 
-// PUT Actualice la lista completa de tareas
+// PUT Actualice la lista completa de tareas // 
 var requestOptionsPut = {
   method: 'PUT',
   headers: {"Content-Type": "application/json",},
@@ -64,15 +61,9 @@ var requestOptionsPut = {
 
   const actualizarTareas = () => {
   fetch("https://playground.4geeks.com/apis/fake/todos/user/sarap", requestOptionsPut)
-
-  .then((todos) => {
-    if (todos.result === "ok") {
-      mostrarTareas();
-    } else {
-      console.log("Failed to create new todo");
-    }
-  })
-
+  .then(response => response.json())  // convertir a json
+  .then(result => {console.log(result) //imprimir (el resultado) los datos en la consola
+  useState(result)})
   .catch(error => console.log('error', error));}  // Capturar errores
 
   useEffect(() => {
@@ -101,8 +92,7 @@ return (
         </div>
         <div className="row">
              <ul className="nueva">
-         
-          {todos.map((item, index) => (
+              {todos.map((item, index) => (
                 <li key={index} className="row entrada">
                   <div className="col-11">{item.label}</div>
                   <div className="col-1">
@@ -120,4 +110,4 @@ return (
   </div>
 );
 };
-export default TodoList;
+export default Tareas;

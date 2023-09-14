@@ -1,5 +1,7 @@
 import React from "react";
-import TodoList from "./TodoList";
+import Tareas from "./Tareas";
+
+
 
 //include images into your bundle
 
@@ -7,7 +9,7 @@ import TodoList from "./TodoList";
 const Home = () => {
 	return (
 		<div>
-			<TodoList />
+			<Tareas/>
 		</div>
 	);
 };
