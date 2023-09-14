@@ -30,6 +30,26 @@ const eliminarTareas = (index) => {
 
 
 
+// Crear usuario
+let requestOptionsPost = {
+  method: 'POST',
+  headers: { "Content-Type": "application/json", },
+  body: JSON.stringify([]),
+  redirect: 'follow'
+};
+
+
+const CrearUsuario = () => {
+fetch("https://playground.4geeks.com/apis/fake/todos/user/sarap", requestOptionsPost)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+}
+useEffect(() => {
+  CrearUsuario();
+}, [])
+
 //METODO GET - Obtener una lista de tareas pendientes para un usuario en particular
 let requestOptions = {
   method: 'GET',
